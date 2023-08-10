@@ -2,7 +2,7 @@
   "name": "api-budget-managment",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "swagger": "tsoa spec",
     "dev": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\"",
