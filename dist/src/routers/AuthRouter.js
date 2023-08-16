@@ -29,8 +29,11 @@ authRouter.route('/register')
     let { name, email, password } = req === null || req === void 0 ? void 0 : req.body;
     let hashedPassword = '';
     if (name && password && email) {
+<<<<<<< HEAD
         //deleting spaces on email
         email = email.trim();
+=======
+>>>>>>> bd89ddd1ab60795bc6b12c649435a18f1490969b
         // Obtain the password in request and cypher
         hashedPassword = bcrypt_1.default.hashSync(password, 8);
         let newUser = {
@@ -56,8 +59,11 @@ authRouter.route('/login')
     .post(jsonParser, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     let { email, password } = req === null || req === void 0 ? void 0 : req.body;
     if (email && password) {
+<<<<<<< HEAD
         //deleting spaces on email
         email = email.trim();
+=======
+>>>>>>> bd89ddd1ab60795bc6b12c649435a18f1490969b
         // Controller Instance to excute method
         const controller = new AuthController_1.AuthController();
         let auth = {
