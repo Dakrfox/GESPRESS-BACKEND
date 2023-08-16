@@ -25,7 +25,11 @@ authRouter.route('/register')
         let { name, email, password } = req?.body;
         let hashedPassword = '';
 
+
+
         if( name && password && email){
+            //deleting spaces on email
+            email = email.trim();
             // Obtain the password in request and cypher
             hashedPassword = bcrypt.hashSync(password, 8);
 
@@ -62,6 +66,9 @@ authRouter.route('/login')
 
         if( email && password){
 
+            //deleting spaces on email
+            email = email.trim();
+            
             // Controller Instance to excute method
             const controller: AuthController = new AuthController();
 
