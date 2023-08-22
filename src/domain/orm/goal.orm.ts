@@ -15,7 +15,7 @@ dotenv.config();
 /**
  * Method to obtain all goals from Collection "goals" in Mongo Server
  */
-export const getAllgoalsbyUserId = async (page: number, limit: number, userID: string): Promise<any[] | undefined> => {
+export const getAllGoalsbyUserId = async (page: number, limit: number, userID: string): Promise<any[] | undefined> => {
     try {
         let goalModel: any= goalEntity();
 
@@ -44,7 +44,7 @@ export const getAllgoalsbyUserId = async (page: number, limit: number, userID: s
 }
 
 // - Get goal By ID
-export const getgoalByID = async (id: string) : Promise<any | undefined> => {
+export const getGoalByID = async (id: string) : Promise<any | undefined> => {
 
     try {
         let goalModel: any= goalEntity();
@@ -59,7 +59,7 @@ export const getgoalByID = async (id: string) : Promise<any | undefined> => {
 }
 
 // - Delete goal By ID
-export const deletegoalByID = async (id: string): Promise<any | undefined> => {
+export const deleteGoalByID = async (id: string): Promise<any | undefined> => {
 
     try {
         let goalModel: any= goalEntity();
@@ -74,7 +74,7 @@ export const deletegoalByID = async (id: string): Promise<any | undefined> => {
 }
 
 // - Update goal By ID
-export const updategoalByID = async (id: string, goal: Igoal): Promise<any | undefined> => {
+export const updateGoalByID = async (id: string, goal: Igoal): Promise<any | undefined> => {
 
     try {
         
@@ -90,7 +90,7 @@ export const updategoalByID = async (id: string, goal: Igoal): Promise<any | und
 }
 
 // Create new goal
-export const creategoal = async (goal: Igoal): Promise<any | undefined> => {
+export const createGoal = async (goal: Igoal): Promise<any | undefined> => {
     try {
         
         let goalModel: any= goalEntity();
