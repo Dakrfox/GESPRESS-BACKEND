@@ -20,6 +20,9 @@ import dotenv from 'dotenv';
 //dotenv config
 dotenv.config();
 
+//INIT CORS
+const whitelist = ['http://localhost:3000', 'http://localhost:3001'];
+
 //Express configuration
 const server: Express = express();
 
@@ -35,6 +38,9 @@ server.use(
     })
 );
 
+server.use(cors({
+    origin: whitelist
+}));
 
 server.use(
     '/api',
